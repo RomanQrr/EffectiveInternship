@@ -23,7 +23,6 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import dev.chrisbanes.snapper.ExperimentalSnapperApi
 import dev.chrisbanes.snapper.rememberSnapperFlingBehavior
-import ru.effective.internship.romanqrr.models.HeroModel
 import ru.effective.internship.romanqrr.viewModels.HeroesViewModel
 
 @OptIn(ExperimentalSnapperApi::class, ExperimentalMaterial3Api::class)

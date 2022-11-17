@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //Create the list of heroes with their image ID's
         val viewModel = HeroesViewModel()
-        viewModel.getHeroList()
+        viewModel.fetchHeroList()
         setContent {
             //Show the screen that let's user chose between different heroes
             ChooseHeroScreen(viewModel, R.drawable.marvel)

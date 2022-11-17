@@ -6,6 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 import ru.effective.internship.romanqrr.networking.json.CharacterDataWrapper
 
 private const val BASE_URL = "https://gateway.marvel.com:443/v1/public"
@@ -20,8 +21,9 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface MarvelAPIService{
-    @GET("characters?orderBy=-modified&apikey={apiKey}")
-    suspend fun getHeroes(@Path("apiKey") apiKey : String) : CharacterDataWrapper
+    @GET("characters")
+    suspend fun getHeroes(@Query("apiKey") apiKey : String,
+        @Query("orderBy") orderBy : String = "-modified") : CharacterDataWrapper
 }
 
 object MarvelAPI {
