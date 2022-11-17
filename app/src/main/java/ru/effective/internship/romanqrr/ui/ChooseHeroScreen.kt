@@ -24,13 +24,15 @@ import coil.request.ImageRequest
 import dev.chrisbanes.snapper.ExperimentalSnapperApi
 import dev.chrisbanes.snapper.rememberSnapperFlingBehavior
 import ru.effective.internship.romanqrr.models.HeroModel
+import ru.effective.internship.romanqrr.viewModels.HeroesViewModel
 
 @OptIn(ExperimentalSnapperApi::class, ExperimentalMaterial3Api::class)
 @Composable
-internal fun ChooseHeroScreen(heroList : List<HeroModel>, logoId : Int){
+internal fun ChooseHeroScreen(herosViewModel : HeroesViewModel, logoId : Int){
     //Create value to use for snappers in 2 different places.
     val lazyRowState = rememberLazyListState()
     val navController = rememberNavController()
+    val heroList = herosViewModel.heroList
 
     NavHost(navController = navController, startDestination = "chooseHero") {
         composable("chooseHero") {

@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/src/main/java/ru/effective/internship/romanqrr/networking/APIKey.kt
