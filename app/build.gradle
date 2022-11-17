@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
 }
 
 android {
@@ -36,6 +37,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.3.1"
     }
+    namespace 'ru.effective.internship.romanqrr'
 }
 
 dependencies {
@@ -66,4 +68,10 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
     implementation("io.coil-kt:coil-compose:2.2.2")
+
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
+
+
 }

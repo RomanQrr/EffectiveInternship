@@ -2,18 +2,15 @@ package ru.effective.internship.romanqrr
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.compose.setContent;
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
+import androidx.activity.compose.setContent
 import ru.effective.internship.romanqrr.models.HeroModel
 import ru.effective.internship.romanqrr.ui.ChooseHeroScreen
-import ru.effective.internship.romanqrr.ui.HeroCardScreen
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Create the list of heroes with their image ID's
-        val heroList = listOf<HeroModel>(
+        val heroList = listOf(
             HeroModel("IronMan", R.drawable.ironman, "Ironman Description",
             "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/a/a0/Iron_Man_Armor_-_Mark_L.png/revision/latest/scale-to-width-down/240?cb=20180318221316"),
             HeroModel("SpiderMan", R.drawable.spiderman, "Spooderman description",
@@ -29,28 +26,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

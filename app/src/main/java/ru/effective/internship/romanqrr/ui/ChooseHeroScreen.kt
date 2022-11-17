@@ -29,7 +29,7 @@ import ru.effective.internship.romanqrr.models.HeroModel
 @Composable
 internal fun ChooseHeroScreen(heroList : List<HeroModel>, logoId : Int){
     //Create value to use for snappers in 2 different places.
-    val lazyRowState = rememberLazyListState();
+    val lazyRowState = rememberLazyListState()
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "chooseHero") {
